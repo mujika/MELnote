@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <style>
+    .axis { stroke:#333; stroke-width:2; }
+    .curve { fill:none; stroke-width:4; }
+    .curve1 { stroke:#ff6f61; }
+    .grid { stroke:#eee; stroke-width:1; }
+    .label { font-family: -apple-system, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif; font-size:16px; fill:#222; }
+    .title { font-size:24px; font-weight:600; }
+    .note { font-size:14px; fill:#555; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="40" class="label title">発散→収束における情報エントロピー H の推移</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="450" x2="840" y2="450" class="axis"/>
+  <line x1="80" y1="450" x2="80" y2="80" class="axis"/>
+  <text x="845" y="455" class="label">時間 / 制作フェーズ →</text>
+  <text x="25" y="90" class="label" transform="rotate(-90 25,90)">情報エントロピー H ↑</text>
+
+  <!-- Phases bands -->
+  <rect x="80" y="80" width="240" height="370" fill="#fef2f2"/>
+  <rect x="320" y="80" width="240" height="370" fill="#f7fdf5"/>
+  <rect x="560" y="80" width="280" height="370" fill="#f5f8ff"/>
+  <text x="160" y="110" class="label">発散（生成・探索）</text>
+  <text x="400" y="110" class="label">収束（選択・編集）</text>
+  <text x="660" y="110" class="label">固定（配布・運用）</text>
+
+  <!-- Entropy curve: rises, peaks, then gently declines -->
+  <path class="curve curve1" d="M 100 430 C 180 360, 220 240, 300 200 C 380 170, 440 200, 520 220 C 600 230, 660 260, 720 280 C 770 295, 790 320, 820 330"/>
+
+  <!-- Markers -->
+  <circle cx="300" cy="200" r="5" fill="#ff6f61"/>
+  <text x="305" y="195" class="label note">H ピーク（探索の最大化）</text>
+  <text x="585" y="255" class="label note">編集により意味へ収束（H やや低下）</text>
+
+  <!-- Legend -->
+  <rect x="120" y="470" width="16" height="4" fill="#ff6f61"/>
+  <text x="145" y="476" class="label note">H の推移</text>
+</svg>
+
